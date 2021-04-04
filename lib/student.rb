@@ -12,6 +12,10 @@ class Student
     @@all << self 
   end
 
+  def self.all
+    @@all
+  end
+  
   def self.create_from_collection(students_array)
     students_array.each do |student_hash|
       Student.new(student_hash)
@@ -25,8 +29,6 @@ class Student
     self
   end
 
-  def self.all
-    @@all
-  end
+
 end
 
